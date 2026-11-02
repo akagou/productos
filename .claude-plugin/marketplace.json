@@ -1,0 +1,11 @@
+{
+  "name": "productos",
+  "owner": { "name": "Alex Goumans" },
+  "plugins": [
+    {
+      "name": "productos",
+      "source": "./",
+      "description": "Product skills for AI-native teams: strategy, discovery, bets, specs, launch and learning."
+    }
+  ]
+}
