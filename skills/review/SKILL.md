@@ -39,7 +39,7 @@ Fresh review agents read one product document, each from a single angle, and the
 
 2. Find the checklist. This skill's base directory is shown when it loads. The checklist is the file `<base directory>/../<skill>/SKILL.md`, where `<skill>` is the target's `skill` field. If the field is missing, send "none".
 
-3. Start one agent per angle, all in parallel. The agent type is `productos:<angle>`. Send each agent this prompt and nothing else:
+3. Build each absolute path from the output of `pwd`. Do not type a path from memory. Start one agent per angle, all in parallel. The agent type is `productos:<angle>`. Send each agent this prompt and nothing else:
 
    ```
    Review this document: <absolute path of the target>
