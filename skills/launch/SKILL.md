@@ -16,6 +16,7 @@ Writes `product/bets/<slug>/launch.md`: who gets the feature, in which stages, w
 ## Before you start
 
 - Read `product/PRODUCT.md`, the pitch, the spec and `outcomes.md`.
+- Read `product/voice.md` if it exists. Write customer copy in that voice.
 - If the feature uses AI, read `ai-scope.md` and `evals.md`.
 - Ask one question at a time, 4 at most, for what is missing: the audience, the date window, who owns each readiness line, and what number would make the team roll back.
 

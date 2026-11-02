@@ -55,7 +55,7 @@ The work moves through seven stages. Teams enter at any stage and skip what they
 | Ship | How does it reach people, and at what price? | launch, pricing |
 | Learn | What happened, and what do we change? | readout, decision, update |
 
-The system skills work across all stages: `using-productos` (loaded at session start), `start`, `next`, `ingest`, `review` and `drift`.
+The system skills work across all stages: `using-productos` (loaded at session start), `start`, `design-system`, `voice`, `output`, `next`, `ingest`, `review` and `drift`.
 
 ### Product context in the repo
 
@@ -78,9 +78,17 @@ product/
   bets/<slug>/      assess, pitch, tests, prototype, spec, tracking-plan, ai-scope, evals, launch, readout
   reviews/          document, UX and drift reviews
   updates/          stakeholder updates
+  output/           slide decks: Markdown sources and the HTML from render.mjs
+  voice.md          the team's voice for copy and its changes to the ProductOS style
 ```
 
 Each skill creates its own file when it first runs. `start` creates only `PRODUCT.md` and the three logs. Every artifact has frontmatter with `skill` (the skill that wrote it), `status` and `updated`. Skills read `PRODUCT.md` first and write back to the logs.
+
+`design-system` writes one file outside `product/`: `DESIGN.md` at the repo root, in the open DESIGN.md format from Google Labs, because design tools look for it there. It starts from a plain default with system fonts and AA contrast. The team replaces each value with its own, and the file lists the defaults that remain. When code defines the tokens, the code is the source and `DESIGN.md` names that file. `prototype`, `ux-review` and `output` read it.
+
+`voice` writes `product/voice.md` from copy the team already wrote. It lists checkable rules, spelling, a word list and before and after examples. Skills follow it for customer copy and for any change the team makes to the ProductOS style. A voice cannot change the labels or the answer-first order.
+
+`output` renders Markdown slides to one self-contained HTML deck with `skills/output/render.mjs`. The script has no dependencies. It picks each slide's layout from the content: cover, statement, large numbers, steps, two columns, quote, or title and content. The agent writes Markdown only, so the look stays fixed and markup costs no tokens. The script warns on filler and hype words, em dashes, exclamation marks, sentences over 25 words, slides over 45 words, titles over 14 words, lists over 5 items, decks over 12 slides, confidence labels, IDs outside Source lines and team words such as feature flag. Labels and IDs stay in `product/`. A slide says how sure a claim is in plain words. It does not judge the other patterns in the style guide, so the agent reads each slide as the reader.
 
 ### Labels
 

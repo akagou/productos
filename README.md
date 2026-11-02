@@ -15,7 +15,7 @@ Start a new session after you install. ProductOS loads a short routing skill at 
 
 ## First ten minutes
 
-1. Open your product's repo and say "set up ProductOS". The `start` skill reads the README and recent commits, drafts `product/PRODUCT.md`, and asks you a few questions to correct it.
+1. Open your product's repo and say "set up ProductOS". The `start` skill reads the README and recent commits, drafts `product/PRODUCT.md`, and asks you a few questions to correct it. If your product has screens, it then offers `design-system`.
 2. Ask "what next?". The `next` skill reads `product/` and recommends one move.
 3. Describe a feature you are thinking about. The `pitch` skill writes a one-page bet with a time limit, the risks and what is left out.
 4. Say "review this". The `review` skill starts fresh agents that never saw your conversation, and each reads the pitch from one angle.
@@ -37,7 +37,7 @@ Teams enter at any stage and skip what they do not need.
 | Specify | What exactly do we build? | `spec`, `tracking-plan`, `ai-scope`, `evals` |
 | Ship | How does it reach people, and at what price? | `launch`, `pricing` |
 | Learn | What happened, and what do we change? | `readout`, `decision`, `update` |
-| Any stage | | `using-productos`, `start`, `next`, `ingest`, `review`, `drift` |
+| Any stage | | `using-productos`, `start`, `design-system`, `voice`, `output`, `next`, `ingest`, `review`, `drift` |
 
 You do not need to call skills by name. Ask in your own words, and the agent loads the matching skill. To call one directly, use its full name, for example `/productos:spec`.
 
@@ -56,6 +56,8 @@ product/
   bets/<slug>/      assess, pitch, tests, prototype, spec, tracking-plan, ai-scope, evals, launch, readout
   reviews/          document, UX and drift reviews
   updates/          stakeholder updates
+  output/           slide decks: Markdown sources and the HTML
+  voice.md          the team's own voice for copy
 ```
 
 Each skill creates its own file the first time it runs. Every file records the skill that wrote it, its status (Draft, Reviewed, Agreed) and the date.
@@ -74,6 +76,16 @@ A simulated user is never evidence.
 ## Writing style
 
 Every document ProductOS writes follows one voice: the answer first, plain words, one claim per sentence. [docs/style.md](docs/style.md) lists the rules. The newcomer review agent reports sentences that break them.
+
+A team sets its own voice with the `voice` skill. It reads copy the team already wrote and writes `product/voice.md`: spelling, tone, words to use and avoid, with before and after examples from that copy. Skills that write customer copy follow it. The labels and the answer-first order stay the same for every team.
+
+## Visual design
+
+The `design-system` skill writes `DESIGN.md` at the root of your repo, in the open [DESIGN.md format](https://github.com/google-labs-code/design.md). It reads the colors, type and spacing your code already defines and asks you to fill the gaps. Where it finds nothing, it keeps a plain default and lists it, so you can see what is not yours yet. Prototypes follow the file, and `ux-review` checks screens against it. Design tools that read the format use the same file.
+
+## Slides
+
+The `output` skill turns documents into an HTML slide deck for readers outside the team. The agent writes short Markdown slides: one claim per title, under 45 words, a source on each slide. A script in the skill picks the layout from the content (cover, large numbers, steps, two columns, quote, table) and writes one HTML file. Every deck has the same look, and the agent spends no tokens on markup. The script lists filler words, em dashes, long sentences and crowded slides for the agent to fix. Slides show no ProductOS labels or IDs. The agent says how sure a claim is in plain words, and the script flags labels, IDs and team words such as "feature flag". The deck uses the colors and fonts in `DESIGN.md`, and printing it gives a PDF with one slide per page.
 
 ## Fresh review
 

@@ -2,6 +2,8 @@
 
 One voice for the skills, the review agents and every document they write under `product/`. Product readers are busy and read a document once. Write so that one read is enough.
 
+A team can change these rules for its own copy in `product/voice.md`, written by `productos:voice`. Where the two differ, follow `voice.md`. The labels and the answer-first order stay.
+
 ## The voice
 
 Write like a sharp colleague who explains a problem across a desk. Use plain verbs and concrete nouns. Make each claim once. State a position and give its basis.

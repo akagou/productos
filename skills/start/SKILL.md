@@ -129,6 +129,7 @@ Newest first. Each entry uses the format in productos:decision.
 
 ## Then
 
+- If the product has screens and the repo has no `DESIGN.md`, suggest `productos:design-system`. It puts the team's colors and type in one file.
 - If "How we know it works" says "Not measured yet", suggest `productos:outcomes`.
 - Otherwise suggest `productos:next`.
 

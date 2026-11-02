@@ -2,6 +2,7 @@
 // Exits 1 on any error. Warnings do not fail the run.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { render, lint, SLOP } from '../skills/output/render.mjs';
 
 const root = new URL('..', import.meta.url).pathname;
 const errors = [], warnings = [];
@@ -10,7 +11,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 
 const SECTIONS = ['## When to use', '## Before you start', '## Steps', '## Output',
   '## Check before you finish', '## Then', '## Source'];
-const HYPE = /\b(really|actually|very|genuinely|arguably|perhaps|somewhat|utiliz(e|es|ed|ing)|seamless(ly)?|robust|leverag(e|es|ed|ing)|game-changing|delve|cutting-edge|best-in-class|world-class|revolutionary|synerg(y|ies)|unlock(s|ed|ing)?|empower(s|ed|ing)?)\b/i;
+const HYPE = SLOP;
 const CHAT_ONLY = new Set(['using-productos', 'next']);
 
 function frontmatter(text, file) {
@@ -73,6 +74,13 @@ for (const f of texts) {
   if (hit) err(`${f}: banned word "${hit[0]}", see docs/style.md`);
   if (/—|\s--\s/.test(text)) err(`${f}: em dash`);
 }
+
+// Page renderer: one sample through render.mjs
+const page = render('---\nupdated: 2026-11-02\n---\n# Answer\nAsk.\n---\n## Numbers\n- 9% of messages\n- 4 of 4 firms\n---\n## Claim\n---\n## Rows\n| Name | Count |\n|---|---|\n| a | 3 |\n\n- [ ] a <b>\n');
+for (const want of ['is-cover', '<h1>Answer</h1>', 'is-stats', 'is-statement', 'class="num"', 'November 2, 2026', 'class="box"', '&lt;b&gt;'])
+  if (!page.includes(want)) err(`render.mjs: deck lacks ${want}`);
+if (lint('## Title\n- Ship it behind a flag (Told, E-001)').length !== 3) err('render.mjs: lint misses a label, an ID or a team word');
+if (lint('## Title\nA very good idea \u2014 do it now!').length !== 3) err('render.mjs: lint misses a filler word, an em dash or an exclamation mark');
 
 for (const w of warnings) console.log(`warn  ${w}`);
 for (const e of errors) console.log(`error ${e}`);

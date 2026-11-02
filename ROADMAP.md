@@ -26,6 +26,7 @@ A candidate moves to Next when a real person asks for it, or when a run of the s
 | Skill | Produces | Horizon | Why |
 |---|---|---|---|
 | `ux-review` | An expert review of a screen, flow or running product | Now | Designers had no skill for their own craft. |
+| `design-system` | `DESIGN.md` at the repo root with the team's colors, type and components | Now | Prototypes look like the product. Design tools read the same file. |
 | `journey-map` | The customer's steps, actions, feelings and pains across one job | Next | Shows designers where in the experience to act. |
 | `usability-test` | A moderated test plan, script and results for a live product | Next | `prototype` covers throwaway builds. Live products need the same method. |
 | `service-blueprint` | Customer actions, staff actions, back-office processes and systems for one service | Later | For products where people and software deliver the service together. |
@@ -63,6 +64,7 @@ A candidate moves to Next when a real person asks for it, or when a run of the s
 |---|---|---|---|
 | `positioning` | Alternatives, unique attributes, value, best-fit customers, category and message | Now | Business viability had no skill of its own. |
 | `pricing` | Value metric, packaging, unit economics and a price test plan | Now | AI features change the cost of each use, so price is a product decision. |
+| `voice` | `product/voice.md`: the team's rules, words and examples for copy | Now | Customer copy sounds like the team, not like the model. |
 | `battlecard` | One page per competitor: where we win, where we lose, answers to objections | Next | Sales uses it every week, and it reuses the market scan. |
 | `messaging-test` | A test of headlines and value claims with best-fit customers | Later | Turns positioning from Guess into evidence. |
 | `case-study` | A customer story draft with numbers the customer approved | Later | Proof for sales and the website. |
@@ -72,6 +74,7 @@ A candidate moves to Next when a real person asks for it, or when a run of the s
 
 | Skill | Produces | Horizon | Why |
 |---|---|---|---|
+| `output` | An HTML slide deck from product documents, for a reader outside the team | Now | Stakeholders read slides, not a folder of Markdown. |
 | `portfolio-review` | A view across bets and teams: outcome, stage, owner, cost | Later | For leaders with several teams and one budget. |
 | `operating-cadence` | A team's recurring meetings, documents and decision rights | Later | The starting point for team harnesses. |
 | `retro` | A team retrospective on how the work went | Later | `readout` covers results. This covers the way of working. |

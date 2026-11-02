@@ -9,6 +9,7 @@ ProductOS is a Claude Code plugin of product skills for AI-native teams. The des
 - `skills/<name>/SKILL.md`: one folder per skill, flat.
 - `agents/`: the review agents, one per angle, read-only.
 - `scripts/check.mjs`: structural checks. Run it before every commit.
+- `skills/output/render.mjs`: the page renderer. No dependencies. It also contains the banned-word list that `check.mjs` uses.
 - `docs/style.md`: the writing style.
 
 ## Rules

@@ -16,6 +16,7 @@ Writes `product/positioning.md`: the context that makes the product's value obvi
 ## Before you start
 
 - Read `product/PRODUCT.md`, `jobs.md`, `evidence.md`, `strategy.md` and the latest `*-market-scan.md` in `product/research/`.
+- Read `product/voice.md` if it exists. Write customer copy in that voice.
 - If `product/positioning.md` exists, update it and keep the date of the last change.
 - Without a market scan, offer `productos:market-scan` first. If the person declines, list the alternatives from `PRODUCT.md` and label each Guess.
 - You need the product's strongest customers. If the evidence does not name them, ask one question: "Which customers would be hardest to lose, and why?" Ask 3 questions at most.

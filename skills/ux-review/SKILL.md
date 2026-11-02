@@ -12,11 +12,12 @@ Writes `product/reviews/<YYYY-MM-DD>-ux-<slug>.md`: an expert review of a screen
 - "UX review", "usability check", "accessibility audit", "walk through the flow".
 - After a prototype or a build, and before a test with users.
 - Not for documents: use `productos:review`.
-- This review does not judge visual taste.
+- This review does not judge visual taste. It checks the screens against `DESIGN.md` if the repo has one.
 
 ## Before you start
 
 - Read `product/PRODUCT.md`, and the spec or prototype notes for the flow.
+- Read `DESIGN.md` at the repo root, if it exists.
 - You need the material: screenshots, exported designs or a URL. For a URL, use a browser tool if one is available. If none is, ask for screenshots.
 - You need the user and the task. Take them from `PRODUCT.md` or the spec. If neither names them, ask: "Who is the user, and what are they trying to do?"
 
@@ -25,7 +26,7 @@ Writes `product/reviews/<YYYY-MM-DD>-ux-<slug>.md`: an expert review of a screen
 1. Name the user and the task in one line each, then the starting point and the finish.
 2. List the steps of the task in order, as the user takes them. Give each step a number and a screenshot reference.
 3. For each step, ask the 3 walkthrough questions: (a) does the user know what to do, (b) can the user see how to do it, (c) does the user understand the result. Record each no as a finding.
-4. Check each step against Nielsen's 10 heuristics: system status, match with the real world, user control, consistency, error prevention, recognition over recall, flexibility, minimal design, error recovery, help. Record only real problems.
+4. Check each step against Nielsen's 10 heuristics: system status, match with the real world, user control, consistency, error prevention, recognition over recall, flexibility, minimal design, error recovery, help. Record only real problems. If `DESIGN.md` exists, compare colors, type and components with it. Record a mismatch under consistency.
 5. Check accessibility against WCAG 2.2 level AA: contrast, keyboard use, focus order, labels, alt text and target size. For each check, write the method: Tool (name it), Eye, or Not done with the reason. Do not claim a pass for a check you did not do.
 6. Check the words on screen: labels, empty states and error messages. Each one must be plain and say what to do next.
 7. Write the findings table. Give each finding a severity (Blocker, Major or Minor), the heuristic or WCAG criterion, the place, what happens and the fix.

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0, 2026-11-02
+
+- New skill `design-system`: writes `DESIGN.md` at the repo root in the open DESIGN.md format. It reads the tokens in the code, keeps a plain default where it finds none and lists each default.
+- `start` offers `design-system` when the product has screens.
+- `prototype` tells the coding agent to follow `DESIGN.md`. `ux-review` checks screens against it.
+- New skill `output`: an HTML slide deck from product documents. The agent writes short Markdown slides. `skills/output/render.mjs` picks each layout, writes the deck with no dependencies and warns on crowded slides, banned words, confidence labels, IDs and team words. The deck takes its colors and fonts from `DESIGN.md`.
+- New skill `voice`: writes `product/voice.md` from the team's own copy. The routing skill, `positioning`, `launch` and `pricing` follow it.
+- `scripts/check.mjs` runs a sample deck through the renderer and takes its banned words from it.
+
 ## 0.3.0, 2026-11-02
 
 - `docs/style.md`: one writing style for skills, agents and the documents they write.

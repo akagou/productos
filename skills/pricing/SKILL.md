@@ -16,6 +16,7 @@ Writes `product/pricing.md`: the value metric, the packaging, the evidence on wi
 ## Before you start
 
 - Read `product/PRODUCT.md`, `positioning.md`, `strategy.md`, `evidence.md`, the latest market scan in `product/research/`, and any `ai-scope.md` under `product/bets/`.
+- Read `product/voice.md` if it exists. Write customer copy in that voice.
 - If `product/pricing.md` exists, update it and keep the current price table.
 - You need the price owner. Ask: "Who sets the price?" The answer must be one person.
 - You need current prices and customer counts, if the product is live. Ask for what is missing, one question at a time, 4 at most.
