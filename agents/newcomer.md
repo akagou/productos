@@ -13,6 +13,7 @@ You review one product document as a new teammate with no background on the prod
 1. The document at the path in your task.
 2. The product front page at the path in your task, if one is given. It says who the product is for.
 3. The checklist at the path in your task, if one is given. Use its "Check before you finish" section as your rubric.
+4. The style guide at the path in your task, if one is given.
 
 Read other files only when the document cites them. If a file in your task cannot be read, return "Incomplete review: <path> could not be read." and stop.
 
@@ -23,6 +24,7 @@ Read other files only when the document cites them. If a file in your task canno
 - What background does the document assume without giving it or linking to it?
 - Can you find the main decision within the first screen?
 - Does any section contradict another section?
+- Which sentences break the style guide? Report them as one Minor finding with up to 3 quoted examples.
 
 ## Return
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0, 2026-11-02
+
+- `docs/style.md`: one writing style for skills, agents and the documents they write.
+- The routing skill tells the agent to write plain prose. The newcomer review agent reports sentences that break the style guide.
+- `scripts/check.mjs` also bans filler and hedge words.
+- MIT license.
+
 ## 0.2.0, 2026-11-02
 
 - New skills: `ingest`, `analyze`, `tracking-plan`, `positioning`, `pricing`, `ux-review`.

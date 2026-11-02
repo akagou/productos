@@ -71,6 +71,10 @@ Every claim about customers, markets or numbers has one of four labels:
 
 A simulated user is never evidence.
 
+## Writing style
+
+Every document ProductOS writes follows one voice: the answer first, plain words, one claim per sentence. [docs/style.md](docs/style.md) lists the rules. The newcomer review agent reports sentences that break them.
+
 ## Fresh review
 
 The `review` skill starts one agent per angle, in parallel: customer, skeptic, business, builder, newcomer and AI risk. Each agent reads only the document, the front page and the checklist of the skill that wrote the document. None of them sees the conversation. The findings go into one report in `product/reviews/`, and you decide which to fix. The method comes from the [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model).
@@ -85,4 +89,8 @@ A spec from `spec` gives the context, a story map, the first slice, testable acc
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the skill contract and [docs/design.md](docs/design.md) for the design. Run `node scripts/check.mjs` before you commit.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the skill contract, [docs/style.md](docs/style.md) for the voice and [docs/design.md](docs/design.md) for the design. Run `node scripts/check.mjs` before you commit.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

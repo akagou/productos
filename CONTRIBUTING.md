@@ -62,9 +62,9 @@ Write `product/<path>`.
 - **Checklist.** The checks state properties of the output, not effort ("Each opportunity links to one outcome", not "Think about outcomes"). The review agents use this list as their rubric.
 - **Fresh text.** Write every skill new. Cite frameworks by author and year. Do not copy text from other skill libraries.
 
-## Writing style for generated artifacts
+## Writing style
 
-Use plain words and the active voice, with a named person or team as the subject. Keep sentences short. Put numbers, names and sources where an adjective would go. Use commas or full stops in place of em dashes. `scripts/check.mjs` lists the hype words that skills must not use or ask for.
+[docs/style.md](docs/style.md) sets the voice. Skill and agent text follows its Simplified Technical English rules. Output templates follow its rules for product documents. `scripts/check.mjs` finds the listed words and em dashes.
 
 ## Checks
 
@@ -72,4 +72,4 @@ Run `node scripts/check.mjs` before you commit. It exits non-zero on any error.
 
 ## Testing locally
 
-Load the plugin without installing it: `claude --plugin-dir <path to this repo>`. Run it in a product repo outside this folder. Claude Code blocks writes inside the folder of a loaded plugin, so copy `examples/lintel/` somewhere else before you run skills on it.
+Load the plugin without installing it: `claude --plugin-dir <path to this repo>`. Run it in a product repo outside this folder. Claude Code blocks writes inside the folder of a loaded plugin, so copy `examples/lintel/` somewhere else before you run skills on it. In a headless run (`claude -p`), also pass `--add-dir <path to this repo>`. Without it, the review agents cannot read the checklists or the style guide.

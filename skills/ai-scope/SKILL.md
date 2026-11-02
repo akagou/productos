@@ -64,7 +64,7 @@ Why not simpler: <reason for each earlier form>.
 |---|---|---|---|
 
 ## Never
-- <An action the AI must never take, even if asked>
+- <An action the AI must never take, even if asked, starting with its verb: "Reply to a tenant">
 - <Second action>
 - <Third action>
 

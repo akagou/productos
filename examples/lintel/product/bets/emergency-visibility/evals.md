@@ -9,7 +9,7 @@ thresholds_set: Not set yet. The numbers below are proposals. Priya Raman sets t
 
 # Evals: Emergency visibility
 
-No eval has been run. No result below is measured.
+Nobody has run an eval yet. Every number below is a target.
 
 ## What good looks like
 | Criterion | Traces to | Grader |

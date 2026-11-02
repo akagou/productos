@@ -1,8 +1,11 @@
 {
   "name": "productos",
   "displayName": "ProductOS",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Product skills for AI-native teams: strategy, discovery, bets, specs, launch and learning, with product context kept in the repo.",
   "author": { "name": "Alex Goumans" },
+  "homepage": "https://github.com/akagou/productos",
+  "repository": "https://github.com/akagou/productos",
+  "license": "MIT",
   "keywords": ["product-management", "product-discovery", "specs", "ai-native", "skills"]
 }

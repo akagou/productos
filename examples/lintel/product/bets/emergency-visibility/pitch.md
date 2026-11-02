@@ -34,9 +34,9 @@ Guardrail: monthly logo churn stays at or below 4.1%.
 - SMS reliability (48% connect within 14 days): fixes stay in the small-fixes lane. Email and web-form detection do not depend on them.
 
 ## No-gos
-- No AI reply drafts, no auto-replies to tenants, and no emergency phone number auto-reply (S3).
-- No automatic dispatch of vendors.
-- No changes to the strategy or to the weekly-active definition.
+- AI reply drafts, auto-replies to tenants and an emergency phone number auto-reply (S3).
+- Automatic dispatch of vendors.
+- Changes to the strategy or to the weekly-active definition.
 
 ## Riskiest assumptions
 | ID | Assumption | Risk | Confidence |

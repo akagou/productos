@@ -10,7 +10,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 
 const SECTIONS = ['## When to use', '## Before you start', '## Steps', '## Output',
   '## Check before you finish', '## Then', '## Source'];
-const HYPE = /\b(seamless(ly)?|robust|leverag(e|es|ed|ing)|game-changing|delve|cutting-edge|best-in-class|world-class|revolutionary|synerg(y|ies)|unlock(s|ed|ing)?|empower(s|ed|ing)?)\b/i;
+const HYPE = /\b(really|actually|very|genuinely|arguably|perhaps|somewhat|utiliz(e|es|ed|ing)|seamless(ly)?|robust|leverag(e|es|ed|ing)|game-changing|delve|cutting-edge|best-in-class|world-class|revolutionary|synerg(y|ies)|unlock(s|ed|ing)?|empower(s|ed|ing)?)\b/i;
 const CHAT_ONLY = new Set(['using-productos', 'next']);
 
 function frontmatter(text, file) {
@@ -70,7 +70,7 @@ for (const f of texts) {
   const text = read(f);
   for (const [, ref] of text.matchAll(/productos:([a-z0-9-]+)/g)) if (!names.has(ref)) err(`${f}: unknown reference productos:${ref}`);
   const hit = text.match(HYPE);
-  if (hit) err(`${f}: hype word "${hit[0]}"`);
+  if (hit) err(`${f}: banned word "${hit[0]}", see docs/style.md`);
   if (/—|\s--\s/.test(text)) err(`${f}: em dash`);
 }
 

@@ -29,7 +29,7 @@ Chosen: keep paid seats as the metric. Reason: billing and every customer's invo
 | Pro (to test, not to sell yet) | Firms that want alerts to reach people at night, such as the 450-unit firm | Everything in Standard, plus the emergency alert SMS with the 15-minute repeat. Later slices could add on-call rotas, a voice-call escalation and weekly response-time reports (not built, not in the bet). | Alerts. Detection and the Urgent strip stay in Standard (see below). | $49 per seat per month, a $10 step (Guess: no evidence for the number) | Guess |
 
 ### The tension to decide
-- The one firm that said it would pay more named exactly the alert SMS (Told, E-012). If the alert is in Standard, that firm's word buys nothing. If the alert is in Pro, firms on Standard see the flag in the Urgent strip but get no text at night.
+- The one firm that said it would pay more named exactly the alert SMS (Told, E-012). If the alert is in Standard, that firm's word buys nothing. With a Pro-only alert, firms on Standard see the flag in the Urgent strip but get no text at night.
 - Priya is unsure about charging for a safety feature. I agree this needs care. A firm on Standard could miss an emergency that Lintel had detected. That is a reputational and possibly legal risk (Guess, to check with a lawyer).
 - Recommendation: do not decide the Pro price now. The feature is not built and the pilot has 3 firms. Run the pilot with everything free. Decide the packaging before general availability, not after, because moving a feature from free to paid later takes it away from customers and is hard to undo. Decision date: read of the pilot on 2027-01-15. Owner: Priya Raman proposes, Sam Ortiz decides.
 - If Pro goes ahead, my recommendation is that detection, the Urgent strip and one alert SMS to one on-call number stay in Standard, and Pro adds convenience on top (rotas, call escalation, reports). This keeps the safety floor free. It will probably earn less from the firm that asked. That trade is Sam's and Priya's to make.
@@ -70,12 +70,12 @@ I have no hosting or support cost, so these are not gross margins. They show tha
 - The cost depends on volume: the SMS price is Told and the message volume per firm is the median. A firm with 10 times the median would cost about $30 a month. Check the largest firm before launch.
 
 ## Change plan
-- No existing customer pays more and nothing in Standard is removed, so no notice is needed for now. If the Pro tier later moves a feature that existing Standard customers already use, that becomes a price change for existing customers. Plan then: 90 days' notice and the old price kept for that period. (Guess: the notice length is my suggestion, not agreed.)
+- No existing customer pays more and nothing in Standard is removed, so no notice is needed for now. If the Pro tier later moves a feature that existing Standard customers already use, that becomes a price change for existing customers. Plan then: 90 days' notice and the old price kept for that period. (Guess) Nobody has agreed the notice length yet.
 - Pilot firms are told in writing that the alerts are free during the pilot and that pricing is decided after 2027-01-15. Priya sends the note, and Sam approves it.
 
 ## Price test
 - Before general availability, ask 5 firms with an on-call phone, after they see the Urgent strip in Lena's sessions (week of 2026-11-16, if Priya adds the question): what they pay now for tools that handle urgent messages, and at what price the alert would be too cheap, a good value, getting expensive and too expensive (Van Westendorp). Answers are Told.
-- After the pilot, offer Pro at $49 per seat to the 3 pilot firms from 2027-01-15 and count who pays. This is the first price anyone can actually pay. It is only 3 firms, so it is weak evidence.
+- After the pilot, offer Pro at $49 per seat to the 3 pilot firms from 2027-01-15 and count who pays. This is the first real price offer. It is only 3 firms, so it is weak evidence.
 - Stop conditions: stop the paid offer if no pilot firm accepts at the price, or if monthly logo churn passes the 4.1% guardrail (outcomes.md). Plan the test with `productos:test`. Owner: Priya Raman.
 
 ## Decision

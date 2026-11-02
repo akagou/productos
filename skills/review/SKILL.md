@@ -48,6 +48,8 @@ Fresh review agents read one product document, each from a single angle, and the
    Return your findings in the format your instructions give.
    ```
 
+   For the newcomer agent, add one line before the last line: `Style guide: <absolute path of <base directory>/../../docs/style.md>`.
+
    Do not add a summary of the conversation, the author's intent, or your own opinion. Each of those gives the agent the context that a fresh review must not have.
 
 4. Merge the findings. When two agents report the same problem in the same place, keep one finding, use the higher severity, and list both angles. Drop findings that point to nothing in the document. Number the findings R1, R2 and so on, Blockers first.

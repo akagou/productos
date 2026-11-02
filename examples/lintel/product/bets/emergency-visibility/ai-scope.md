@@ -33,11 +33,11 @@ Why not simpler: plain keyword code is the first form to try and is the baseline
 | Dismiss or confirm a flag | write (reversible) | Staff only. The AI cannot do this. | Not applicable |
 
 ## Never
-- Never reply to, message or call a tenant.
-- Never delay, hide or delete any message, flagged or not.
-- Never send an alert to any number other than the firm's saved on-call number.
-- Never dispatch a vendor or create a repair ticket.
-- Never mark a message "not an emergency" in a way that removes it from the inbox.
+- Reply to, message or call a tenant.
+- Delay, hide or delete any message, flagged or not.
+- Send an alert to any number other than the firm's saved on-call number.
+- Dispatch a vendor or create a repair ticket.
+- Mark a message "not an emergency" in a way that removes it from the inbox.
 
 ## Human checkpoints
 | Checkpoint | Who | When | How to undo |

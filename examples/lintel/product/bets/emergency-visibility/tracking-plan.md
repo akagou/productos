@@ -11,7 +11,7 @@ bet: emergency-visibility
 ## Naming and identity
 No application code or existing tracking calls are in this repo (searched for `track(`, `analytics.`, `capture(`). I used the Object Action form with a past-tense verb, for example "Message Flagged". Tom checks the names against the real codebase before the build. (Guess)
 
-Identity: every event carries `account_id` (the firm). Events caused by a person also carry `user_id`. System events (detection, alerts) carry no `user_id`. `message_id` is an opaque internal ID, so the team can join events for one message.
+Identity: every event includes `account_id` (the firm). Events caused by a person also include `user_id`. System events (detection, alerts) have no `user_id`. `message_id` is an opaque internal ID, so the team can join events for one message.
 
 ## Metrics
 Baselines are "not measured yet" unless stated. Thresholds come from `evals.md` and the pitch. They are proposals until Priya sets them.
@@ -169,7 +169,7 @@ For Priya to add to `spec.md`.
 - When a staff member first opens a flagged message, the product records Flag Opened once, with seconds since arrival.
 - When a staff member clicks Confirm or Dismiss, the product records Flag Reviewed with the action.
 - When an admin saves, changes or removes the on-call number, the product records On-Call Number Changed. No phone number is stored in the event.
-- No event carries message text, tenant names, unit numbers, phone numbers or the model's free-text reason.
+- Events never include message text, tenant names, unit numbers, phone numbers or the model's free-text reason.
 
 ## Open questions
 | Question | Owner | Due |
