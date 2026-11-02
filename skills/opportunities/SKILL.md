@@ -30,7 +30,7 @@ Writes `product/opportunities.md`: an opportunity solution tree as a nested list
 5. Give each opportunity evidence IDs from `evidence.md`. If there are none, label it Guess. Never invent a quote.
 6. Ask the person to choose one target opportunity, a leaf that is narrow enough to solve in one bet. Write the reason in a sentence, for example size, frequency, strategic fit or evidence strength. The person decides. You propose.
 7. Under the target, list at least 3 candidate solutions: S1, S2, S3. Make them different in kind, not 3 sizes of one idea. Include one that needs no new software.
-8. Under each solution, list its riskiest assumptions. Add each one to `product/assumptions.md` with the next free ID and a risk type. Link the ID in the tree.
+8. Under each solution, list its riskiest assumptions. Add each one to `product/assumptions.md` with the next free ID, a risk type from Value, Usability, Feasibility or Viability, and a confidence label. Link the ID in the tree.
 9. Say which solution looks most promising to you, with one reason, and label it Guess.
 
 ## Output
@@ -56,11 +56,11 @@ target: <opportunity ID>
   - **O1** <need in the customer's words> (<Confidence>, <evidence IDs>)
     - **O1.1** <narrower need> (<Confidence>, <evidence IDs>)
       - **S1** <solution> (<Confidence>)
-        - A-xxx <riskiest assumption> (<risk type>)
+        - A-xxx <riskiest assumption> (<Value | Usability | Feasibility | Viability>, <Confidence>)
       - **S2** <solution> (<Confidence>)
-        - A-xxx <riskiest assumption> (<risk type>)
+        - A-xxx <riskiest assumption> (<Value | Usability | Feasibility | Viability>, <Confidence>)
       - **S3** <solution> (<Confidence>)
-        - A-xxx <riskiest assumption> (<risk type>)
+        - A-xxx <riskiest assumption> (<Value | Usability | Feasibility | Viability>, <Confidence>)
   - **O2** <need> (<Confidence>, <evidence IDs>)
 
 ## Not chosen

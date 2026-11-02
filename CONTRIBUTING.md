@@ -69,3 +69,7 @@ Use plain words and the active voice, with a named person or team as the subject
 ## Checks
 
 Run `node scripts/check.mjs` before you commit. It exits non-zero on any error.
+
+## Testing locally
+
+Load the plugin without installing it: `claude --plugin-dir <path to this repo>`. Run it in a product repo outside this folder. Claude Code blocks writes inside the folder of a loaded plugin, so copy `examples/lintel/` somewhere else before you run skills on it.

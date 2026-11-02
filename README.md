@@ -20,6 +20,10 @@ Start a new session after you install. ProductOS loads a short routing skill at 
 3. Describe a feature you are thinking about. The `pitch` skill writes a one-page bet with a time limit, the risks and what is left out.
 4. Say "review this". The `review` skill starts fresh agents that never saw your conversation, and each reads the pitch from one angle.
 
+## Example
+
+[`examples/lintel/`](examples/lintel/) is a fictional shared inbox for property managers. The skills turned 4 interview notes, 24 support tickets and a metrics sheet into the whole `product/` folder. The CEO asked for AI reply drafts. The evidence pointed at missed emergency messages, so the assessment proposed Hold and the pitch went to emergency visibility. The folder ends with a fresh review of the spec: 18 findings, 6 of them Blockers. [`RUNS.md`](examples/lintel/RUNS.md) gives the prompts.
+
 ## The skills
 
 Teams enter at any stage and skip what they do not need.
