@@ -47,15 +47,15 @@ The work moves through seven stages. Teams enter at any stage and skip what they
 
 | Stage | Question | Skills |
 |---|---|---|
-| Direction | Where are we going, and how will we know? | strategy, outcomes, roadmap |
-| Understand | What do customers need, and what do they use today? | research-plan, synthesis, jobs, feedback, market-scan |
+| Direction | Where are we going, and how will we know? | strategy, outcomes, roadmap, positioning |
+| Understand | What do customers need, and what do they use today? | research-plan, synthesis, jobs, feedback, market-scan, analyze |
 | Choose | Which problem do we take on next? | opportunities, assess, prioritize, pitch |
-| Shape | What must be true, and how do we check it cheaply? | assumptions, test, prototype |
-| Specify | What exactly do we build? | spec, ai-scope, evals |
-| Ship | How does it reach people? | launch |
+| Shape | What must be true, and how do we check it cheaply? | assumptions, test, prototype, ux-review |
+| Specify | What exactly do we build? | spec, tracking-plan, ai-scope, evals |
+| Ship | How does it reach people, and at what price? | launch, pricing |
 | Learn | What happened, and what do we change? | readout, decision, update |
 
-The system skills work across all stages: `using-productos` (loaded at session start), `start`, `next`, `review` and `drift`.
+The system skills work across all stages: `using-productos` (loaded at session start), `start`, `next`, `ingest`, `review` and `drift`.
 
 ### Product context in the repo
 
@@ -68,12 +68,15 @@ product/
   outcomes.md
   opportunities.md
   roadmap.md
+  positioning.md
+  pricing.md
   assumptions.md    log, IDs A-001
   evidence.md       log, IDs E-001
   decisions.md      log, IDs D-001
-  research/         research plans, syntheses, feedback sweeps, market scans
-  bets/<slug>/      assess, pitch, tests, prototype, spec, ai-scope, evals, launch, readout
-  reviews/          review and drift reports
+  research/         research plans, syntheses, feedback sweeps, market scans, analyses
+  notes/            digests of meetings, documents and threads
+  bets/<slug>/      assess, pitch, tests, prototype, spec, tracking-plan, ai-scope, evals, launch, readout
+  reviews/          document, UX and drift reviews
   updates/          stakeholder updates
 ```
 
@@ -101,6 +104,8 @@ All skills use the same short lists. A label is written exactly as listed, with 
 | Review severity | Blocker, Major, Minor |
 | Finding state | Open, Fixed, Rejected |
 | Drift state | Built, Partial, Missing, Extra |
+| Ingest change state | Proposed, Confirmed, Changed, Dropped |
+| Accessibility check method | Tool, Eye, Not done |
 
 Confidence definitions:
 

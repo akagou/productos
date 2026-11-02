@@ -16,5 +16,5 @@ ProductOS is a Claude Code plugin of product skills for AI-native teams. The des
 - Use only the labels in `docs/design.md`.
 - Keep examples fictional. No real client, employer or person names.
 - Write all text fresh. Do not copy from other skill libraries.
-- When you add, rename or remove a skill, update the skill table in `README.md` and the stage table in `docs/design.md`.
+- When you add, rename or remove a skill, update the skill table in `README.md`, the stage table in `docs/design.md`, the routing table in `skills/using-productos/SKILL.md` and `ROADMAP.md`.
 - Bump the version in `.claude-plugin/plugin.json` and add a `CHANGELOG.md` entry for each release.

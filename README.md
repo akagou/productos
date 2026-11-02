@@ -30,14 +30,14 @@ Teams enter at any stage and skip what they do not need.
 
 | Stage | Question | Skills |
 |---|---|---|
-| Direction | Where are we going, and how will we know? | `strategy`, `outcomes`, `roadmap` |
-| Understand | What do customers need, and what do they use today? | `research-plan`, `synthesis`, `jobs`, `feedback`, `market-scan` |
+| Direction | Where are we going, and how will we know? | `strategy`, `outcomes`, `roadmap`, `positioning` |
+| Understand | What do customers need, and what do they use today? | `research-plan`, `synthesis`, `jobs`, `feedback`, `market-scan`, `analyze` |
 | Choose | Which problem do we take on next? | `opportunities`, `assess`, `prioritize`, `pitch` |
-| Shape | What must be true, and how do we check it cheaply? | `assumptions`, `test`, `prototype` |
-| Specify | What exactly do we build? | `spec`, `ai-scope`, `evals` |
-| Ship | How does it reach people? | `launch` |
+| Shape | What must be true, and how do we check it cheaply? | `assumptions`, `test`, `prototype`, `ux-review` |
+| Specify | What exactly do we build? | `spec`, `tracking-plan`, `ai-scope`, `evals` |
+| Ship | How does it reach people, and at what price? | `launch`, `pricing` |
 | Learn | What happened, and what do we change? | `readout`, `decision`, `update` |
-| Any stage | | `using-productos`, `start`, `next`, `review`, `drift` |
+| Any stage | | `using-productos`, `start`, `next`, `ingest`, `review`, `drift` |
 
 You do not need to call skills by name. Ask in your own words, and the agent loads the matching skill. To call one directly, use its full name, for example `/productos:spec`.
 
@@ -49,10 +49,12 @@ ProductOS keeps product knowledge next to the code, where people and agents both
 product/
   PRODUCT.md        front page: who it is for, the problem, the outcome, current bets
   strategy.md       outcomes.md       opportunities.md       roadmap.md
+  positioning.md    pricing.md
   assumptions.md    evidence.md       decisions.md           (logs with IDs)
-  research/         plans, syntheses, feedback sweeps, market scans
-  bets/<slug>/      assess, pitch, tests, prototype, spec, ai-scope, evals, launch, readout
-  reviews/          review and drift reports
+  research/         plans, syntheses, feedback sweeps, market scans, analyses
+  notes/            digests of meetings, documents and threads
+  bets/<slug>/      assess, pitch, tests, prototype, spec, tracking-plan, ai-scope, evals, launch, readout
+  reviews/          document, UX and drift reviews
   updates/          stakeholder updates
 ```
 
@@ -76,6 +78,10 @@ The `review` skill starts one agent per angle, in parallel: customer, skeptic, b
 ## Hand-off to engineering
 
 A spec from `spec` gives the context, a story map, the first slice, testable acceptance criteria and the open questions with owners. Give its path to your coding workflow: `superpowers:writing-plans` in [Superpowers](https://github.com/obra/superpowers), `egm-draft` in the Elephant-Goldfish Model, or your own agent. After the build, `drift` compares the spec with the code.
+
+## Roadmap
+
+[ROADMAP.md](ROADMAP.md) lists the candidate skills by the people who would use them, including skills from consulting, operations and AI adoption work.
 
 ## Contributing
 

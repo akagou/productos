@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0, 2026-11-02
+
+- New skills: `ingest`, `analyze`, `tracking-plan`, `positioning`, `pricing`, `ux-review`.
+- New folders in `product/`: `notes/` for ingest digests, and `positioning.md` and `pricing.md` at the top level.
+- `ROADMAP.md` with candidate skills grouped by the people who would use them.
+- `review` builds absolute paths from `pwd`. `opportunities` uses the exact risk labels.
+
 ## 0.1.0, 2026-11-02
 
 First release.
